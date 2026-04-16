@@ -152,7 +152,7 @@ export const BookingFlow: React.FC<BookingFlowProps> = ({ vehicle, onClose }) =>
               <div className="bg-blue-600/10 border border-blue-400/20 rounded-xl p-4">
                 <div className="flex justify-between text-sm mb-1">
                   <span className="text-white/60">Duration</span>
-                  <span className="text-white">{pricing.durationValue} {pricing.durationType}(s)</span>
+                  <span className="text-white">{pricing.durationValue} {pricing.durationValue === 1 ? pricing.durationType : `${pricing.durationType}s`}</span>
                 </div>
                 <div className="flex justify-between text-sm mb-1">
                   <span className="text-white/60">Base ({formatCurrency(pricing.pricePerUnit)}/{pricing.durationType})</span>

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-node/
+.env
+*.local
+*.log
+.DS_Store
+*.tsbuildinfo
+functions/node_modules/
+functions/lib/

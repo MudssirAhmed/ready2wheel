@@ -56,7 +56,7 @@ export const BookingHistory: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-between mt-2">
                   <span className="text-xs text-white/40">
-                    {booking.durationValue} {booking.durationValue === 1 ? booking.durationType : `${booking.durationType}s`} · {booking.pickupPincode}
+                    {booking.durationValue} {booking.durationValue === 1 ? booking.durationType : ({ hourly: 'hours', daily: 'days', weekly: 'weeks', monthly: 'months' }[booking.durationType] ?? booking.durationType + 's')} · {booking.pickupPincode}
                   </span>
                   <span className="font-bold text-blue-400 text-sm">
                     {formatCurrency(booking.totalAmount)}
